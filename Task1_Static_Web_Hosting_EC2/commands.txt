@@ -1,0 +1,10 @@
+sudo apt update
+sudo apt install nginx -y
+sudo apt install zip -y
+sudo wget -O myweb.zip https://www.tooplate.com/download/2108_dashboard
+sudo unzip myweb.zip
+cd /
+cd var
+cd www
+cd html
+sudo cp -r ~/2108_dashboard/. /var/www/html/
