@@ -1,0 +1,13 @@
+lsblk
+sudo fdisk /dev/nvme1n1
+sudo mkfs -t ext4 /dev/nvme1n1p1
+sudo mkdir /mnt/mydata
+sudo mount /dev/nvme1n1p1 /mnt/mydata
+sudo blkid /dev/nvme1n1p1
+sudo nano /etc/fstab
+sudo mount -a
+df -h
+sudo chown -R ubuntu:ubuntu /mnt/mydata
+cd /mnt/mydata
+touch testfile.txt
+ls -l
